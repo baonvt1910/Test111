@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+{{>head title=this.title subpage='Page X' }}
+
+<body>
+    {{>header  title=this.title}}
+
+    <main>
+        <H1>{{title}}</H1>
+        <div class="product">
+            
+             <div class="product-row">
+                {{#each product}}
+                    <div class="product-col">
+                        <img height="100px" src="{{ImgLink}}" class="product-img">
+                        <div class="product-body">
+                            <H2>{{ProductName}}</H2>
+                            <BR>Thông tin sản phẩm
+                            <h3 class="info"> - Mã : {{ProductCode}}</h3>
+                            <h3 class="info"> - Nhãn Hiệu: {{Brand}} </h3>
+                            <H3 class="info"> - Giá: {{Price}} VNĐ</H3>
+
+                            <a href="#" class="buy-product-button"> Buy </a>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+
+           <div class="footer">
+                 {{>footer}}
+            </div>
+
+        </div>
+        
+    </main>
+    
+<!-- Khai báo trên module trước -->
+</body>
+
+<style>
+    
+    .product{
+        margin-top: 50px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .product-row{
+        display: block;
+        margin: 10px;
+        width: 100%;
+        margin-bottom: 50px ;
+    }
+    .product-col{
+        display: block;
+        float: left;
+        width: 33.333333333334%;
+    }
+    .buy-product-button{
+        
+    }
+
+    .info{
+        font-size: 20px;
+    }
+</style>
+
+</html>

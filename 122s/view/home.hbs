@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+{{>head title=this.title subpage='Page X' }}
+
+<body>
+    {{>header  title=this.title}}
+
+    <main>
+         
+        <div class="container" >
+            <p>
+                <img width=300px src="chipu-001.jpg" />
+                Các nội dung có trong trang Web:
+                <ol>
+                    {{#each people}}
+                    <li>{{this}}</li>
+                    {{/each}}
+                      
+                </ol>
+            </p>
+        </div>
+    </main>
+    {{>footer}}
+</body>
+<style>
+    
+</style>
+</html>
